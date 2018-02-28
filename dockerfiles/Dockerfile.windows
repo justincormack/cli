@@ -1,0 +1,5 @@
+FROM    golang:1.9.4-windowsservercore
+
+ENV     DISABLE_WARN_OUTSIDE_CONTAINER=1
+WORKDIR /go/src/github.com/docker/cli
+CMD     powershell -Command .\scripts\build\windows.ps1
